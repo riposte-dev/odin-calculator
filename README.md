@@ -1,2 +1,2 @@
-# odin-calculator
-A calculator website created for The Odin Project!
+# Odin Calculator
+A calculator website created for [The Odin Project](https://www.theodinproject.com/)!
