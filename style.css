@@ -17,6 +17,10 @@
         height: 100%;
         background: white;
         display: flex;
+
+        p {
+            flex: auto;
+        }
     }
 
     #button-row {
