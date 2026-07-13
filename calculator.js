@@ -1,3 +1,4 @@
+let calculatorWidget = document.querySelector("#calculator-widget");
 let a, b = 0;
 let operator;
 
@@ -33,3 +34,7 @@ function operate(a, b, operator) {
             break;
     }
 }
+
+calculatorWidget.addEventListener("click", (event) => {
+
+});
