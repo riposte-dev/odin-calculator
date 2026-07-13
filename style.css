@@ -1,3 +1,7 @@
+* {
+    outline: 2px solid red;
+}
+
 #calculator-widget {
     display: flex;
     flex-direction: column;
