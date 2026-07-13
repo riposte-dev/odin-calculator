@@ -1,4 +1,5 @@
 let calculatorWidget = document.querySelector("#calculator-widget");
+let calculatorDisplay = document.querySelector("#display");
 let a, b = 0;
 let operator;
 
