@@ -1,3 +1,6 @@
+let a, b = 0;
+let operator;
+
 function add() {
 
 }
