@@ -36,6 +36,10 @@ function operate(a, b, operator) {
     }
 }
 
+function getInput() {
+
+}
+
 calculatorWidget.addEventListener("click", (event) => {
     let target = event.target;
 
@@ -49,6 +53,9 @@ calculatorWidget.addEventListener("click", (event) => {
             break;
         case "DEL":
             calculatorDisplay.textContent = calculatorDisplay.textContent.slice(0, calculatorDisplay.textContent.length - 1);
+            break;
+        case "=":
+            getInput();
             break;
         default:
             calculatorDisplay.textContent += target.textContent;
