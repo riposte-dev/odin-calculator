@@ -43,5 +43,13 @@ calculatorWidget.addEventListener("click", (event) => {
         return;
     }
 
-    calculatorDisplay.textContent += target.textContent;
+    switch (target.textContent) {
+        case "CLEAR":
+            calculatorDisplay.textContent = "";
+            break;
+        default:
+            calculatorDisplay.textContent += target.textContent;
+            break;
+    }
+
 });
