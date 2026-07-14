@@ -47,6 +47,9 @@ calculatorWidget.addEventListener("click", (event) => {
         case "CLEAR":
             calculatorDisplay.textContent = "";
             break;
+        case "DEL":
+            calculatorDisplay.textContent = calculatorDisplay.textContent.slice(0, calculatorDisplay.textContent.length - 1);
+            break;
         default:
             calculatorDisplay.textContent += target.textContent;
             break;
