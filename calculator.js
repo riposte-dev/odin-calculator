@@ -42,4 +42,6 @@ calculatorWidget.addEventListener("click", (event) => {
     if (target.nodeName != "BUTTON") {
         return;
     }
+
+    calculatorDisplay.textContent += target.textContent;
 });
