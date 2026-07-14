@@ -55,4 +55,5 @@ calculatorWidget.addEventListener("click", (event) => {
             break;
     }
     /*  */
+    /*  */
 });
