@@ -54,5 +54,5 @@ calculatorWidget.addEventListener("click", (event) => {
             calculatorDisplay.textContent += target.textContent;
             break;
     }
-
+    /*  */
 });
