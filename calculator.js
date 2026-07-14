@@ -37,5 +37,9 @@ function operate(a, b, operator) {
 }
 
 calculatorWidget.addEventListener("click", (event) => {
+    let target = event.target;
 
+    if (target.nodeName != "BUTTON") {
+        return;
+    }
 });
