@@ -72,8 +72,8 @@ function operate(a, b, operator) {
 
 function evaluateNumberPair() {
     let numberPair = calculatorDisplay.textContent.split(operator);
-    a = parseInt(numberPair[0]);
-    b = parseInt(numberPair[1]);
+    a = parseFloat(numberPair[0]);
+    b = parseFloat(numberPair[1]);
     calculatorDisplay.textContent = operate(a, b, operator);
 }
 
