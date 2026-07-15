@@ -34,6 +34,13 @@ function operate(a, b, operator) {
     }
 }
 
+function evaluateNumberPair() {
+    let numberPair = calculatorDisplay.textContent.split(operator);
+    a = parseInt(numberPair[0]);
+    b = parseInt(numberPair[1]);
+    calculatorDisplay.textContent = operate(a, b, operator);
+}
+
 calculatorWidget.addEventListener("click", (event) => {
     let target = event.target;
 
@@ -44,10 +51,7 @@ calculatorWidget.addEventListener("click", (event) => {
     if (operators.includes(target.textContent)) {
         for (let i = 0; i < calculatorDisplay.textContent.length; i++) {
             if (operators.includes(calculatorDisplay.textContent[i])) {
-            let numberPair = calculatorDisplay.textContent.split(operator);
-            a = parseInt(numberPair[0]);
-            b = parseInt(numberPair[1]);
-            calculatorDisplay.textContent = operate(a, b, operator);
+                evaluateNumberPair();
             }
         }
     }
@@ -69,10 +73,7 @@ calculatorWidget.addEventListener("click", (event) => {
 
     switch (target.textContent) {
         case "=":
-            let numberPair = calculatorDisplay.textContent.split(operator);
-            a = parseInt(numberPair[0]);
-            b = parseInt(numberPair[1]);
-            calculatorDisplay.textContent = operate(a, b, operator);
+            evaluateNumberPair();
             break;
         case "CLEAR":
             a = 0;
