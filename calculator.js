@@ -1,3 +1,4 @@
+const operators = ["+", "-", "*", "/"];
 let calculatorWidget = document.querySelector("#calculator-widget");
 let calculatorDisplay = document.querySelector("#display");
 let a = 0;
@@ -40,6 +41,17 @@ calculatorWidget.addEventListener("click", (event) => {
         return;
     }
 
+    if (operators.includes(target.textContent)) {
+        for (let i = 0; i < calculatorDisplay.textContent.length; i++) {
+            if (operators.includes(calculatorDisplay.textContent[i])) {
+            let numberPair = calculatorDisplay.textContent.split(operator);
+            a = parseInt(numberPair[0]);
+            b = parseInt(numberPair[1]);
+            calculatorDisplay.textContent = operate(a, b, operator);
+            }
+        }
+    }
+    
     switch (target.textContent) {
         case "+":
             operator = "+";
