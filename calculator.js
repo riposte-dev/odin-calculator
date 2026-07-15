@@ -33,21 +33,6 @@ function operate(a, b, operator) {
     }
 }
 
-function getInput() {
-    let currentInput = calculatorDisplay.textContent;
-
-    for (let i = 0; i < currentInput.length; i++) {
-        let currentChar = currentInput[i];
-
-        const digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-        const operators = ["+", "-", "*", "/"];
-
-        if (digits.includes(parseInt(currentChar))) {
-            a += currentChar;
-        }
-    }
-}
-
 calculatorWidget.addEventListener("click", (event) => {
     let target = event.target;
 
