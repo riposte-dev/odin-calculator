@@ -72,6 +72,9 @@ calculatorWidget.addEventListener("click", (event) => {
         case "/":
             operator = "/";
             break;
+    }
+
+    switch (target.textContent) {
         case "=":
             break;
         case "CLEAR":
