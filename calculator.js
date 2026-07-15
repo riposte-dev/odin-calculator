@@ -60,6 +60,20 @@ calculatorWidget.addEventListener("click", (event) => {
     }
 
     switch (target.textContent) {
+        case "+":
+            operator = "+";
+            break;
+        case "-":
+            operator = "-";
+            break;
+        case "*":
+            operator = "*";
+            break;
+        case "/":
+            operator = "/";
+            break;
+        case "=":
+            break;
         case "CLEAR":
             a = 0;
             b = 0;
@@ -67,9 +81,6 @@ calculatorWidget.addEventListener("click", (event) => {
             break;
         case "DEL":
             calculatorDisplay.textContent = calculatorDisplay.textContent.slice(0, calculatorDisplay.textContent.length - 1);
-            break;
-        case "=":
-            getInput();
             break;
         default:
             calculatorDisplay.textContent += target.textContent;
