@@ -76,6 +76,9 @@ calculatorWidget.addEventListener("click", (event) => {
 
     switch (target.textContent) {
         case "=":
+            let numberPair = calculatorDisplay.textContent.split(operator);
+            a = parseInt(numberPair[0]);
+            b = parseInt(numberPair[1]);
             break;
         case "CLEAR":
             a = 0;
