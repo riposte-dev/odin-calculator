@@ -60,6 +60,8 @@ calculatorWidget.addEventListener("click", (event) => {
 
     switch (target.textContent) {
         case "CLEAR":
+            a = undefined;
+            b = undefined;
             calculatorDisplay.textContent = "";
             break;
         case "DEL":
