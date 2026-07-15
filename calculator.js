@@ -1,9 +1,12 @@
 const operators = ["+", "-", "*", "/"];
+
 let calculatorWidget = document.querySelector("#calculator-widget");
 let calculatorDisplay = document.querySelector("#display");
+
+let calculatorInput = "";
 let a = 0;
 let b = 0;
-let operator;
+let operator = "";
 
 function add(a, b) {
     if (isNaN(a)) {
@@ -74,7 +77,8 @@ function evaluateNumberPair() {
     let numberPair = calculatorDisplay.textContent.split(operator);
     a = parseFloat(numberPair[0]);
     b = parseFloat(numberPair[1]);
-    calculatorDisplay.textContent = operate(a, b, operator);
+    calculatorInput = operate(a, b, operator);
+    calculatorDisplay = calculatorInput;
 }
 
 calculatorWidget.addEventListener("click", (event) => {
@@ -85,8 +89,8 @@ calculatorWidget.addEventListener("click", (event) => {
     }
 
     if (operators.includes(target.textContent)) {
-        for (let i = 0; i < calculatorDisplay.textContent.length; i++) {
-            if (operators.includes(calculatorDisplay.textContent[i])) {
+        for (let i = 0; i < calculatorInput.length; i++) {
+            if (operators.includes(calculatorInput[i])) {
                 evaluateNumberPair();
             }
         }
@@ -114,13 +118,16 @@ calculatorWidget.addEventListener("click", (event) => {
         case "CLEAR":
             a = 0;
             b = 0;
-            calculatorDisplay.textContent = "";
+            calculatorInput = "";
+            calculatorDisplay.textContent = calculatorInput;
             break;
         case "DEL":
-            calculatorDisplay.textContent = calculatorDisplay.textContent.slice(0, calculatorDisplay.textContent.length - 1);
+            calculatorInput = calculatorInput.slice(0, calculatorInput.length - 1);
+            calculatorDisplay.textContent = calculatorInput;
             break;
         default:
-            calculatorDisplay.textContent += target.textContent;
+            calculatorInput += target.textContent;
+            calculatorDisplay.textContent = calculatorInput;
             break;
     }
 });
