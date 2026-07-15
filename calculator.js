@@ -6,18 +6,50 @@ let b = 0;
 let operator;
 
 function add(a, b) {
+    if (isNaN(a)) {
+        a = 0;
+    }
+
+    if (isNaN(b)) {
+        b = 0;
+    }
+
     return a + b;
 }
 
 function subtract(a, b) {
+    if (isNaN(a)) {
+        a = 0;
+    }
+
+    if (isNaN(b)) {
+        b = 0;
+    }
+
     return a - b;
 }
 
 function multiply(a, b) {
+    if (isNaN(a)) {
+        a = 1;
+    }
+
+    if (isNaN(b)) {
+        b = 1;
+    }
+
     return a * b;
 }
 
 function divide(a, b) {
+    if (isNaN(a)) {
+        a = 1;
+    }
+
+    if (isNaN(b)) {
+        b = 1;
+    }
+
     return a / b;
 }
 
