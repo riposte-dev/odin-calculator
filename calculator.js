@@ -1,7 +1,6 @@
 let calculatorWidget = document.querySelector("#calculator-widget");
 let calculatorDisplay = document.querySelector("#display");
-let a = 0;
-let b = 0;
+let a, b;
 let operator;
 
 function add(a, b) {
