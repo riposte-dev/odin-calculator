@@ -50,6 +50,10 @@ function divide(a, b) {
         b = 1;
     }
 
+    if (b == 0) {
+        return "UNDEFINED";
+    }
+
     return a / b;
 }
 
