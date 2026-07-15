@@ -78,7 +78,7 @@ function evaluateNumberPair() {
     a = parseFloat(numberPair[0]);
     b = parseFloat(numberPair[1]);
     calculatorInput = operate(a, b, operator);
-    calculatorDisplay = calculatorInput;
+    calculatorDisplay.textContent = Number(calculatorInput.toPrecision(3));
 }
 
 calculatorWidget.addEventListener("click", (event) => {
