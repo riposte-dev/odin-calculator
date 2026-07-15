@@ -79,6 +79,7 @@ calculatorWidget.addEventListener("click", (event) => {
             let numberPair = calculatorDisplay.textContent.split(operator);
             a = parseInt(numberPair[0]);
             b = parseInt(numberPair[1]);
+            console.log(operate(a, b, operator));
             break;
         case "CLEAR":
             a = 0;
