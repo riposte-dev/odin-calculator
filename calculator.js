@@ -88,6 +88,7 @@ calculatorWidget.addEventListener("click", (event) => {
         return;
     }
 
+    /* If user pressed an operator button, check for any existing operators and perform that operation first */
     if (operators.includes(target.textContent)) {
         for (let i = 0; i < calculatorInput.length; i++) {
             if (operators.includes(calculatorInput[i])) {
