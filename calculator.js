@@ -78,9 +78,22 @@ function evaluateNumberPair() {
     let numberPair = calculatorDisplay.textContent.split(operator);
     a = parseFloat(numberPair[0]);
     b = parseFloat(numberPair[1]);
+
     calculatorInput = operate(a, b, operator);
     result = calculatorInput;
     calculatorDisplay.textContent = Math.round(calculatorInput * 1000) / 1000;
+    
+    if (numberPair[0].indexOf(".") != numberPair[0].lastIndexOf(".")) {
+        calculatorInput = "SYNTAX ERROR";
+        result = calculatorInput;
+        calculatorDisplay.textContent = calculatorInput;
+    }
+
+    if (numberPair[1].indexOf(".") != numberPair[1].lastIndexOf(".")) {
+        calculatorInput = "SYNTAX ERROR";
+        result = calculatorInput;
+        calculatorDisplay.textContent = calculatorInput;
+    }
 }
 
 calculatorWidget.addEventListener("click", (event) => {
