@@ -4,9 +4,10 @@ let calculatorWidget = document.querySelector("#calculator-widget");
 let calculatorDisplay = document.querySelector("#display");
 
 let calculatorInput = "";
+let operator = "";
 let a = 0;
 let b = 0;
-let operator = "";
+let result = 0;
 
 function add(a, b) {
     if (isNaN(a)) {
@@ -78,6 +79,7 @@ function evaluateNumberPair() {
     a = parseFloat(numberPair[0]);
     b = parseFloat(numberPair[1]);
     calculatorInput = operate(a, b, operator);
+    result = calculatorInput;
     calculatorDisplay.textContent = Math.round(calculatorInput * 1000) / 1000;
 }
 
@@ -100,16 +102,26 @@ calculatorWidget.addEventListener("click", (event) => {
     switch (target.textContent) {
         case "+":
             operator = "+";
+            result = "";
             break;
         case "-":
             operator = "-";
+            result = "";
             break;
         case "*":
             operator = "*";
+            result = "";
             break;
         case "/":
             operator = "/";
+            result = "";
             break;
+        default:
+            if (result != "") {
+                calculatorInput = "";
+                result = "";
+                calculatorDisplay.textContent = "";
+            }
     }
 
     switch (target.textContent) {
