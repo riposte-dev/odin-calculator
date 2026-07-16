@@ -1,7 +1,6 @@
 # Odin Calculator
 A calculator website created for [The Odin Project](https://www.theodinproject.com/)!
 ## To do
-- When a result is displayed, pressing a new digit should clear the result and start a new calculation instead of appending the digit to the existing result. Check whether this is the case on your calculator!
 - Clean up code (e.g. comments, variable names, logic)
 - Update calculator design
 ### Extra credit
