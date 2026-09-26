@@ -13,16 +13,19 @@ body {
     border-radius: 1em;
 }
 
+button {
+    background-color: #dbe4ee;
+    font-size: 1em;
+}
+
 .operator {
     background-color: #fc7a1e;
     color: white;
-    font-size: 1em;
 }
 
 .command {
     background-color: #696773;
     color: white;
-    font-size: 1em;
 }
 
 #calculator-widget {
