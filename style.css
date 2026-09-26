@@ -9,7 +9,10 @@ body {
 }
 
 #calculator-widget {
-    background: grey;
+    background-color: white;
+}
+
+#calculator-widget {
     width: 300px;
     height: 500px;
     padding: 20px;
