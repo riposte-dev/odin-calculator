@@ -13,6 +13,12 @@ body {
     border-radius: 1em;
 }
 
+.operator {
+    background-color: #fc7a1e;
+    color: white;
+    font-size: 1em;
+}
+
 #calculator-widget {
     width: 300px;
     height: 500px;
@@ -41,6 +47,7 @@ body {
         justify-content: center;
 
         button {
+            width: 75px;
             flex: auto;
         }
     }
