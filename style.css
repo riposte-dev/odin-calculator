@@ -59,6 +59,7 @@ button {
 
         button {
             width: 75px;
+            height: 75px;
             flex: auto;
         }
     }
