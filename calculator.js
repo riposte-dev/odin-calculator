@@ -141,7 +141,7 @@ calculatorWidget.addEventListener("click", (event) => {
         case "=":
             evaluateNumberPair();
             break;
-        case "CLEAR":
+        case "AC":
             a = 0;
             b = 0;
             calculatorInput = "";
