@@ -65,6 +65,10 @@ button:hover {
     outline: 2px solid black;
 }
 
+button:active {
+    opacity: 0.75;
+}
+
 button.double-row {
     height: 42%;
 }
