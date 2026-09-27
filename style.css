@@ -16,21 +16,26 @@ body {
     height: 65vh;
     display: flex;
     flex-direction: column;
-    justify-content: end;
-    align-items: center;
-    gap: 0.5em;
 }
 
 #display {
     width: 100%;
-    height: 100%;
+    height: 30%;
     font-size: 2em;
 }
 
-#button-row {
+#calculator-buttons {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    gap: 0.5em;
+}
+
+#button-column {
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     gap: 0.5em;
 }
 
@@ -39,7 +44,7 @@ button {
     border: 0px;
     border-radius: 1em;
     font-size: 1em;
-    flex: auto;
+    flex: 1;
 }
 
 .operator {
