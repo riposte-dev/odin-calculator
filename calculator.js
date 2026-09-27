@@ -1,4 +1,4 @@
-const operators = ["+", "-", "×", "/"];
+const operators = ["+", "-", "×", "÷"];
 
 let calculatorWidget = document.querySelector("#calculator-widget");
 let calculatorDisplay = document.querySelector("#display");
@@ -69,7 +69,7 @@ function operate(a, b, operator) {
             return subtract(a, b);
         case "×":
             return multiply(a, b);
-        case "/":
+        case "÷":
             return divide(a, b);
     }
 }
@@ -125,8 +125,8 @@ calculatorWidget.addEventListener("click", (event) => {
             operator = "×";
             result = "";
             break;
-        case "/":
-            operator = "/";
+        case "÷":
+            operator = "÷";
             result = "";
             break;
         default:
