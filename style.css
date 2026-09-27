@@ -44,7 +44,7 @@ body {
 
     display: flex;
     flex-direction: column;
-    gap: 0.5em;
+    gap: 2%;
 }
 
 button {
@@ -52,13 +52,15 @@ button {
     border: 0px;
     border-radius: 1em;
 
-    flex: 1;
+    height: 20%;
+
+    flex: auto;
 
     font-size: 1em;
 }
 
 button.double-row {
-    flex: 25%;
+    height: 42%;
 }
 
 .operator {
