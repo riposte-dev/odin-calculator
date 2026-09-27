@@ -100,3 +100,12 @@ a {
 a:hover {
     text-decoration: none;
 }
+
+h1::before {
+    content: "";
+    display: inline-block;
+    background-image: url(icon.svg);
+    background-size: 1em 1em;
+    width: 1em;
+    height: 1em;
+}
