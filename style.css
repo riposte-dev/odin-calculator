@@ -92,3 +92,11 @@ footer {
 
     text-align: center;
 }
+
+a {
+    color: #fc7a1e;
+}
+
+a:hover {
+    text-decoration: none;
+}
