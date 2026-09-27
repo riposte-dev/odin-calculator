@@ -47,6 +47,10 @@ button {
     flex: 1;
 }
 
+button.double-row {
+    flex: 25%;
+}
+
 .operator {
     background-color: #fc7a1e;
     color: white;
